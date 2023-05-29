@@ -33,6 +33,14 @@ section {
     padding: 10rem 9% 2rem;
 }
 
+.education{
+    background-color: var(--second-bg-color);
+}
+
+.achievements{
+    background-color: var(--second-bg-color);
+}
+
 .header{
     position: fixed;
     top: 0;
@@ -199,7 +207,7 @@ span {
     margin: 0;
     list-style-type: none;
 }
-  
+
 #title {
     font-size: 1.8rem;
     color: var(--main-color);
@@ -211,29 +219,122 @@ span {
     margin: 2rem 1.5rem 2.0rem;
     list-style-type: circle;
 }
-    
-.container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-/* apply display: inline-block; when we want to shift to the text being ontop each other */
 
-  .block {
+#noline {
+    text-decoration: none;
+} 
+
+.container {
+    width: 100%;
+    max-width: 90rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+    
+.block {
     background-color: var(--bg-color);
     border: 2px solid var(--second-bg-color);
     border-radius: 10px;
-    padding: 3rem;
-    margin: 3rem;
-  }
-
-.education{
-    background-color: var(--second-bg-color);
+    padding: 2.0rem;
+    margin: 2.5rem;
 }
 
-.projects{
-    background-color: var(--second-bg-color);
+.education-container {
+    width: 100%;
+    max-width: 70rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+    
+.education-block {
+    background-color: var(--bg-color);
+    border: 2px solid var(--second-bg-color);
+    border-radius: 10px;
+    padding: 2rem;
+    margin: 3rem;
+}
+
+.education-block h2{
+    font-size: 2.0rem;
+    text-decoration: underline 2px;
+    text-underline-offset: 2px;
+    margin: .5rem;
+    text-decoration-color: var(--main-color);
+}
+
+
+.education-block p {
+    font-size: 1.8rem;
+    margin: .7rem;
+}
+
+.education-list {
+    font-size: 1.5rem;
+}
+
+
+.project-container {
+    width: 100%;
+    max-width: 150rem;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+  
+.project-block {
+    background-color: var(--bg-color);
+    border: 2px solid var(--second-bg-color);
+    border-radius: 10px;
+    padding: 2rem;
+    flex-basis: calc(50% - 6rem);
+    margin: 3rem;
+    box-sizing: border-box;
+}
+
+.achieve-container {
+    width: 100%;
+    max-width: 150rem;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.achieve-block {
+    background-color: var(--bg-color);
+    border: 2px solid var(--second-bg-color);
+    border-radius: 10px;
+    padding: 2rem;
+    flex-basis: calc(50% - 6rem);
+    margin: 3rem;
+    box-sizing: border-box;
+}
+
+.project-block h2, .achieve-block h2, .block h2 {
+    font-size: 1.8rem;
+    text-decoration: underline 2px;
+    text-underline-offset: 2px;
+    margin: .5rem;
+    text-decoration-color: var(--main-color);
+}
+
+.project-block p, .achieve-block p, .block p {
+    font-size: 1.5rem ;
+}
+
+.projectslist, .experience-list {
+    font-size: 1.35rem;
+}
+
+.projectslist li, .education-list li {
+    margin: 1.5rem;
+}
+
+.experience-list li{
+    margin: 0.5rem;
 }
 
 .footer{
@@ -269,6 +370,12 @@ span {
 }
 
 
+
+
+
+
+
+
 /* ========================== Breakpoints ==================== */
 
 @media (max-width: 1200px) {
@@ -277,14 +384,7 @@ span {
     }
 }
 
-@media (max-width: 1024px){
-
-    .header {
-        padding: 2rem 3%;
-    }
-}
-
-@media (max-width: 992px) {
+@media (max-width: 1024px) {
     .header {
         padding: 2rem 3%;
     }
@@ -298,7 +398,8 @@ span {
     }
 }
 
- @media (max-width: 768px) {
+
+@media (max-width: 768px) {
     #menu-icon {
         display: block;
     }
@@ -338,8 +439,8 @@ span {
     }
 
     .home-img img {
-        width: 50vw;
         max-width: 320px;
+        width: 70vw; 
         margin-top: 4rem;
     }
 
@@ -348,37 +449,32 @@ span {
     }
 
     .about-image img {
-        width: 50vw;
-        max-width: 210px;
-        border-radius: 50%;
+        width: 70vw;
+        max-width: 320px;
+        margin-top: 4rem;
     }
 
-    .aboutlist li, .aboutlistprof li {
-        margin: 1.7rem 1.5rem 1.7rem ;
+    .achieve-container, .project-container {
+        flex-direction: column; 
+        justify-content: center; 
+        align-items: center; 
     }
+    
+    .achieve-block, .project-block {
+        margin: 1.5rem 0; 
+    }
+
 }
 
-@media (max-width: 576px){
-    .about-image img{
-        display: none;
-    }
-
-    .about-content p{
-        font-size: 1.9rem;
-    }
-}
-
-@media (max-width: 481px){
+@media (max-width: 575.98px){
     html{
         font-size: 50%;
     }
 
-}
-
-@media (max-width: 400px) and (min-width: 376px) {
-    .about-content p {
-      font-size: 1.6rem;
+    .about-image img{
+        display: none;
     }
+
 }
 
 @media (max-width: 375px){
@@ -386,11 +482,9 @@ span {
         width: 90vw;
     }
 
-    .about-content p{
-        font-size: 1.8rem;
+    .about-image img {
+        width: 90vw;
     }
-
-
     .footer {
         flex-direction: column-reverse;
     }
@@ -398,11 +492,5 @@ span {
     .footer p {
         text-align: center;
         margin-top: 2rem;
-    }
-}
-
-@media (max-width: 320px){
-    .about-content p{
-        font-size: 1.6rem;
     }
 }
