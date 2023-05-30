@@ -220,10 +220,6 @@ span {
     list-style-type: circle;
 }
 
-#noline {
-    text-decoration: none;
-} 
-
 .container {
     width: 100%;
     max-width: 95rem;
@@ -256,10 +252,7 @@ span {
 
 .education-block h2{
     font-size: 2.0rem;
-    text-decoration: underline 2px;
-    text-underline-offset: 2px;
     margin: .5rem;
-    text-decoration-color: var(--main-color);
 }
 
 
@@ -271,7 +264,6 @@ span {
 .education-list {
     font-size: 1.5rem;
 }
-
 
 .project-container {
     width: 100%;
@@ -315,10 +307,7 @@ span {
 
 .project-block h2, .achieve-block h2, .block h2 {
     font-size: 1.9rem;
-    text-decoration: underline 2px;
-    text-underline-offset: 2px;
     margin: .5rem;
-    text-decoration-color: var(--main-color);
 }
 
 .project-block p, .achieve-block p, .block p {
