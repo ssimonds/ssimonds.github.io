@@ -41,7 +41,7 @@ section {
     background-color: var(--second-bg-color);
 }
 
-.header{
+.header {
     position: fixed;
     top: 0;
     left: 0;
@@ -63,6 +63,12 @@ section {
     font-weight: 600;
     color: var(--text-color);
     cursor: default;
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    margin-right: 0.2rem;
 }
 
 span {
